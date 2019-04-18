@@ -1,6 +1,7 @@
 Dockerfile
 .dockerignore
 node_modules/
+*/node_modules/
 .git/
 coverage/
 npm-debug.log
