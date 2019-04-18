@@ -1,0 +1,11 @@
+Dockerfile
+.dockerignore
+node_modules/
+.git/
+coverage/
+npm-debug.log
+.gitignore
+.env
+.eslintrc
+.editorconfig
+.gitlab-ci.yml
