@@ -7,4 +7,4 @@ RUN npm install
 COPY . .
 RUN chown -R node:node . .
 USER node
-CMD ["node","app.js"]
+CMD ["node","./bin/www"]
