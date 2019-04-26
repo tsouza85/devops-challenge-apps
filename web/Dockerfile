@@ -10,4 +10,4 @@ COPY . $HOME/
 
 WORKDIR $HOME/
 
-CMD [ "npm", "start" ]
+CMD ["node","app.js"]
