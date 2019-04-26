@@ -42,15 +42,11 @@ resource "google_sql_user" "devops-challenge-database-user" {
   instance   = "${google_sql_database_instance.devops-challenge-instance.name}"
 
   name       = "${var.database_user_name}"
-  password   = "${random_string.database-user-pwd.result}"
-  
-  depends_on = ["google_sql_database_instance.devops-challenge-instance"]
+  password   = "${random_string.database-user-pwd.result}" 
 }
 
 resource "google_sql_database" "devops-challenge-database" {
   instance  = "${google_sql_database_instance.devops-challenge-instance.name}"
 
   name      = "${var.database_server_name}"
-
-  depends_on = ["google_sql_database_instance.devops-challenge-instance"]
 }
