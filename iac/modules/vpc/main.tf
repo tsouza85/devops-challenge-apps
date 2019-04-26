@@ -49,7 +49,7 @@ resource "google_compute_firewall" "devops-challenge-fw-external-rules" {
 
     allow {
         protocol = "tcp"
-        ports = ["22", "80", "443"]
+        ports = ["80", "443"]
     }
 
     source_ranges = ["0.0.0.0/0"]
