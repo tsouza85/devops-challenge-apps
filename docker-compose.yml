@@ -11,6 +11,8 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: DlQyRQq4ebZR
   api:
+    depends_on:
+      - db
     build: ./api
     image: tsouza85/devops-challenge-api
     ports:
