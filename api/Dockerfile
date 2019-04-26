@@ -2,10 +2,12 @@ FROM node:11-alpine
 
 ENV HOME=/app
 
+COPY package*.json $HOME/
+
+RUN npm install
+
 COPY . $HOME/
 
 WORKDIR $HOME/
 
-RUN yarn && yarn cache clean
-
-CMD [ "yarn", "start" ]
+CMD [ "npm", "start" ]
