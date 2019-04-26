@@ -1,13 +1,10 @@
 FROM node:11-alpine
 
 ENV HOME=/app
-
-COPY package*.json $HOME/
-
-RUN npm install
-
-COPY . $HOME/
-
 WORKDIR $HOME/
-
+COPY package*.json ./
+RUN npm install
+COPY . .
+RUN chown -R node:node . .
+USER node
 CMD ["node","app.js"]
